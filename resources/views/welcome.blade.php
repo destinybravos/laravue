@@ -5,5 +5,6 @@
         <test-component></test-component>
 
         <ferd-component></ferd-component>
+        <noble-component></noble-component>
     </div>
 @endsection
