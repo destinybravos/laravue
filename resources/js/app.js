@@ -9,6 +9,24 @@ require('./js/testcomponet');
 
 window.Vue = require('vue');
 
+
+
+// Font-Awesome Library Includes
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { 
+    faUser, faUsers, faSignInAlt, faSignOutAlt, faKey, faUserLock, faEnvelope, faPhone, 
+    faPhoneAlt, faSpinner, faCircleNotch, faTimesCircle, faCheckCircle, faLock
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+library.add(faUser, faUsers,faSignInAlt, faSignOutAlt, faKey, faUserLock, faEnvelope, faPhone, faPhoneAlt, faSpinner, faCircleNotch, faTimesCircle, faCheckCircle);
+
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+
+
+// Import the CKEditor Library
+import CKEditor from '@ckeditor/ckeditor5-vue';
+Vue.use( CKEditor );
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

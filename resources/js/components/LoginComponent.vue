@@ -2,19 +2,19 @@
     <div class="col-lg-6">
         <div class="card mt-5 mb-5">
             <div class="card-header">
-                User Login Interface
+                <font-awesome-icon icon="user-lock" /> User Login Interface
             </div>
             <div class="card-body">
                 <div class="form">
                     <form method="post">
                         <div class="form-group">
-                            <label for="email">Username</label>
+                            <label for="email"><font-awesome-icon icon="envelope" /> Email Address</label>
                             <input type="email" id="uname" class="form-control" placeholder="Enter Username" required autocomplete="email" autofocus v-model="uname">
                             <span class="text-danger" v-for="(msg, index) in errors.email" :key="index">{{ msg }}</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="pass">Password</label>
+                            <label for="pass"><font-awesome-icon icon="key" /> Password</label>
                             <input type="password" id="pass" class="form-control" placeholder="Enter password"  required autocomplete="email" v-model="pass">
                             <span class="text-danger" v-for="(msg, index) in errors.password" :key="index">{{ msg }}</span>
                         </div>
@@ -24,14 +24,18 @@
                             <label for="remember">Remember Me</label>
                         </div>
 
+                        <div class="form-group">
+                            <ckeditor :editor="editor" v-model="editorData"></ckeditor>
+                        </div>
+
                         <div class="form-group mb-0">
                             <div class="col-md-8">
                                 <button type="submit" class="btn btn-primary" @click.prevent="userLogin">
-                                    Login
+                                    <font-awesome-icon icon="sign-in-alt" /> Login
                                 </button>
 
                                 <a class="btn btn-link" v-if="resetPasswordLink" :href="resetPasswordLink">
-                                    Forgot Your Password?
+                                    Forgot Your Password? 
                                 </a>
                             </div>
                         </div>
@@ -46,7 +50,7 @@
 
 <script>
 let token = $('meta[name=csrf-token]').attr('content');
-
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 export default {
     props: {
         resetPasswordLink: String
@@ -57,7 +61,14 @@ export default {
             uname:'',
             pass:'',
             remember:'',
-            errors: {}
+            errors: {},
+            editor: ClassicEditor,
+            editorData:'',
+            editorConfig: {
+                toolbar: {
+                    items: ['bold', 'italic', 'link', '|',  'undo', 'redo']
+                }
+            }
         }
     },
     mounted() {
