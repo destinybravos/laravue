@@ -8,17 +8,17 @@
                             THIS IS FERDINAND'S HEADER
                         </div>
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque, voluptates consectetur porro 
-                            
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque, voluptates consectetur porro
+
                         </div>
                     </div>
 
                     <div class="card mt-5 mb-5">
                         <div class="card-header bg-danger text-light">
-                            This is a header
+                            CHANGED THIS
                         </div>
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque, voluptates consectetur porro 
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque, voluptates consectetur porro
                             laborum, similique
                         </div>
                     </div>

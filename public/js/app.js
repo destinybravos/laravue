@@ -37581,7 +37581,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
                 _vm._v(
-                  "\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque, voluptates consectetur porro \n                        \n                    "
+                  "\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque, voluptates consectetur porro\n\n                    "
                 )
               ])
             ]),
@@ -37589,13 +37589,13 @@ var staticRenderFns = [
             _c("div", { staticClass: "card mt-5 mb-5" }, [
               _c("div", { staticClass: "card-header bg-danger text-light" }, [
                 _vm._v(
-                  "\n                        This is a header\n                    "
+                  "\n                        CHANGED THIS\n                    "
                 )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
                 _vm._v(
-                  "\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque, voluptates consectetur porro \n                        laborum, similique\n                    "
+                  "\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque, voluptates consectetur porro\n                        laborum, similique\n                    "
                 )
               ])
             ])
