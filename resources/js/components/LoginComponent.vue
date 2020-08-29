@@ -12,12 +12,13 @@
                             <input type="email" id="uname" class="form-control" placeholder="Enter Username" required autocomplete="email" autofocus v-model="uname">
                             <span class="text-danger" v-for="(msg, index) in errors.email" :key="index">{{ msg }}</span>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="pass">Password</label>
                             <input type="password" id="pass" class="form-control" placeholder="Enter password"  required autocomplete="email" v-model="pass">
+                            <span class="text-danger" v-for="(msg, index) in errors.password" :key="index">{{ msg }}</span>
                         </div>
-                        
+
                         <div class="form-group">
                             <input class="" type="checkbox" id="remember" v-model="remember">
                             <label for="remember">Remember Me</label>
@@ -39,7 +40,7 @@
             </div>
         </div>
 
-        
+
     </div>
 </template>
 
