@@ -2054,6 +2054,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var token = $('meta[name=csrf-token]').attr('content');
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -38055,37 +38056,50 @@ var render = function() {
               2
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "pass" } }, [_vm._v("Password")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.pass,
-                    expression: "pass"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "password",
-                  id: "pass",
-                  placeholder: "Enter password",
-                  required: "",
-                  autocomplete: "email"
-                },
-                domProps: { value: _vm.pass },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+            _c(
+              "div",
+              { staticClass: "form-group" },
+              [
+                _c("label", { attrs: { for: "pass" } }, [_vm._v("Password")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.pass,
+                      expression: "pass"
                     }
-                    _vm.pass = $event.target.value
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "password",
+                    id: "pass",
+                    placeholder: "Enter password",
+                    required: "",
+                    autocomplete: "email"
+                  },
+                  domProps: { value: _vm.pass },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.pass = $event.target.value
+                    }
                   }
-                }
-              })
-            ]),
+                }),
+                _vm._v(" "),
+                _vm._l(_vm.errors.password, function(msg, index) {
+                  return _c(
+                    "span",
+                    { key: index, staticClass: "text-danger" },
+                    [_vm._v(_vm._s(msg))]
+                  )
+                })
+              ],
+              2
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
               _c("input", {
