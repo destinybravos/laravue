@@ -17,7 +17,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h3>PROJECT 2</h3>
-                        <p>Testing the ability of vue components and see what we can do with it</p>
+                        <p>Testing again the ability of vue components and see what we can do with it</p>
                         <a class="btn btn-success" href="#">Browse</a>
                     </div>
                     <div class="card-footer">
@@ -29,7 +29,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h3>PROJECT 3</h3>
-                        <p>Testing the ability of vue components and see what we can do with it</p>
+                        <p>Testing the again ability of vue components and see what we can do with it</p>
                         <a class="btn btn-success" href="#">Browse</a>
                     </div>
                     <div class="card-footer">
