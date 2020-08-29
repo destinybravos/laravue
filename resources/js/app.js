@@ -27,6 +27,7 @@ Vue.component('ferd-component', require('./components/FerdComponent.vue').defaul
 Vue.component('noble-component', require('./components/NobleComponent.vue').default);
 Vue.component('header-component', require('./components/HeaderComponent.vue').default);
 Vue.component('login-component', require('./components/LoginComponent.vue').default);
+Vue.component('register-component', require('./components/RegisterComponent.vue').default);
 
 
 /**

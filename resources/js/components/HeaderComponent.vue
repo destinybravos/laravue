@@ -24,19 +24,19 @@
                                 <a class="nav-link" href="/register"> Register</a>
                             </li>
                         </template>
-                        <template v-else>
+                        <div v-else>
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Username
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{ curUser.name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="" @click.prevent="logoutUser()">
                                        Logout
                                     </a>
                                 </div>
                             </li>
-                        </template>
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -44,16 +44,38 @@
 </template>
 
 <script>
+let token = $('meta[name=csrf-token]').attr('content');
 export default {
     props : {
         guest:Boolean,
         hasRegister: Boolean,
-        currentUser: Object,
+        userData: String,
         appName: String
     },
     data(){
         return {
-            
+            curUser: {},
+            _token:'',
+            errors:{}
+        }
+    },
+    mounted(){
+        // Convert userData string to Json Object and assign it to curUser
+        if (this.userData) {
+            this.curUser = JSON.parse(this.userData);
+        }
+        this._token = token;
+        // console.log(this.curUser);
+    },
+    methods:{
+        logoutUser(){
+            axios.post('/logout', this._token)
+            .then((e)=> { 
+                window.location.reload();
+            })
+            .catch((e) => {
+                console.log(e);
+            })
         }
     }
 }
