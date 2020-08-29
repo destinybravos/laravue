@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('./js/testcomponet');
 
 window.Vue = require('vue');
 
@@ -23,8 +24,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('test-component', require('./components/TestComponent.vue').default);
 Vue.component('zubby-component', require('./components/ZubbyComponent.vue').default);
 Vue.component('ferd-component', require('./components/FerdComponent.vue').default);
-
 Vue.component('noble-component', require('./components/NobleComponent.vue').default);
+Vue.component('header-component', require('./components/HeaderComponent.vue').default);
+Vue.component('login-component', require('./components/LoginComponent.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

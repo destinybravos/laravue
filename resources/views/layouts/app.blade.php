@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -70,7 +70,17 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
+
+        @guest
+            @if (Route::has('register'))
+                <header-component has-register guest app-name="E-Learing with Vue.JS"></header-component>
+            @endif
+        @else
+            <header-component current-user="{{ Auth::user() }}" app-name="E-Learing with Vue.JS"></header-component>
+        @endguest
+
+    
 
         <main class="py-4">
             @yield('content')
