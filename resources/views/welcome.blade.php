@@ -6,5 +6,6 @@
 
         <ferd-component></ferd-component>
         <noble-component></noble-component>
+        <zubby-component></zubby-component>
     </div>
 @endsection
