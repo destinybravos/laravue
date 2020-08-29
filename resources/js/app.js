@@ -22,7 +22,9 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('test-component', require('./components/TestComponent.vue').default);
 Vue.component('zubby-component', require('./components/ZubbyComponent.vue').default);
+Vue.component('ferd-component', require('./components/FerdComponent.vue').default);
 
+Vue.component('noble-component', require('./components/NobleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
