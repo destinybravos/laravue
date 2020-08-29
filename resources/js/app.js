@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('test-component', require('./components/TestComponent.vue').default);
+Vue.component('ferd-component', require('./components/FerdComponent.vue').default);
 
 
 /**
