@@ -71,7 +71,7 @@ export default {
         logoutUser(){
             axios.post('/logout', this._token)
             .then((e)=> { 
-                window.location.reload();
+                window.location.href = '/welcome';
             })
             .catch((e) => {
                 console.log(e);

@@ -2012,7 +2012,7 @@ var token = $('meta[name=csrf-token]').attr('content');
   methods: {
     logoutUser: function logoutUser() {
       axios.post('/logout', this._token).then(function (e) {
-        window.location.reload();
+        window.location.href = '/welcome';
       })["catch"](function (e) {
         console.log(e);
       });
@@ -2106,7 +2106,7 @@ var token = $('meta[name=csrf-token]').attr('content');
         _token: token
       };
       axios.post('/login', loginData).then(function (response) {
-        return console.log(response);
+        window.location.href = '/home';
       })["catch"](function (e) {
         _this.handleError(e);
       });
@@ -2209,7 +2209,7 @@ var token = $('meta[name=csrf-token]').attr('content');
         _token: this._token
       };
       axios.post('/register', data).then(function (res) {
-        console.log(res);
+        window.location.href = '/home';
       })["catch"](function (errors) {
         _this.errorHandler(errors);
       });

@@ -75,7 +75,9 @@ export default {
                 }
 
             axios.post('/login', loginData)
-            .then(response => console.log(response))
+            .then(response => {
+                window.location.href = '/home';
+            })
             .catch((e) => {
                 this.handleError(e)
             });

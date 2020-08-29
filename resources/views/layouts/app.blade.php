@@ -77,7 +77,7 @@
                 <header-component has-register guest app-name="E-Learing with Vue.JS"></header-component>
             @endif
         @else
-            <header-component user-data={{ json_encode(Auth::user()) }} app-name="E-Learing with Vue.JS"></header-component>
+            <header-component user-data="{{ json_encode(Auth::user()) }}" app-name="E-Learing with Vue.JS"></header-component>
         @endguest
 
     

@@ -80,7 +80,7 @@ export default {
 
             axios.post('/register',data)
             .then((res) => {
-                console.log(res);
+                window.location.href = '/home';
             })
             .catch((errors) =>{
                 this.errorHandler(errors);
