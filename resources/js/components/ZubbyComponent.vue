@@ -1,4 +1,5 @@
 <template>
+<div class="container">
   <div class="card">
     <div class="card-header">Zubisofts</div>
     <div class="card-body">
@@ -7,4 +8,5 @@
       <a href="https://github.com/zubisofts" class="btn btn-primary">Know More</a>
     </div>
   </div>
+</div>
 </template>
